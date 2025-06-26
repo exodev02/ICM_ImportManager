@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ovl3lEl1AB8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kevin\\source\\repos\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kevin\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.6\\system.configuration.configurationmanager.9.0.6.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.6\\system.diagnostics.eventlog.9.0.6.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.6\\system.security.cryptography.protecteddata.9.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}

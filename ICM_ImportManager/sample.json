@@ -1,0 +1,53 @@
+{
+  "name": "Import.SQL.CfgDateString",
+  "importType": "DBImport",
+  "hasHeader": true,
+  "table": "CfgDateString",
+  "columnMatchings": {
+    "columns": [
+      "Date",
+      "DateString",
+      "DayOfWeek",
+      "Enable"
+    ],
+    "matched": [
+      "fecha",
+      "fechastring",
+      "diasemana",
+      "enable"
+    ]
+  },
+  "dateFormat": "MonthFirst",
+  "listSubitems": [],
+  "subitemMap": {},
+  "addMember": false,
+  "updateExistingRows": false,
+  "tableType": "Custom",
+  "isLocal": false,
+  "useIncrementalImport": false,
+  "culture": "en-US",
+  "tableEffectiveDated": false,
+  "isODBCTextDriver": false,
+  "version": {
+    "rowVersion": 62444819
+  },
+  "fileOverwrite": false,
+  "importId": 1,
+  "delimiter": "\u0000",
+  "query": "SELECT * FROM TABLE",
+  "queryTimeout": 300,
+  "useAdvanced": false,
+  "model": "model",
+  "importMethod": 0,
+  "userSelected": false,
+  "sandbox": false,
+  "codePage": 0,
+  "ignoreFirst": false,
+  "ignoreLast": false,
+  "recordLength": 0,
+  "uploadStage": false,
+  "predictStage": false,
+  "downloadStage": false,
+  "symonImportType": "None",
+  "refreshAllPipeDatasources": false
+}
