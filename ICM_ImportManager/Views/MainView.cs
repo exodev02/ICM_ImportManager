@@ -17,9 +17,10 @@ namespace ICM_ImportManager.Views
 
             foreach (var model in models)
             {
-                await controller.UploadToApiAsync(model);
-                Console.WriteLine($"Subido: {model.Name}");
-                //Console.WriteLine($"Cargado: {model.Name}, {model.Version.RowVersion = 0}, {model.ImportId}, {model.DateFormat}");
+                await controller.UploadImportsAsync(model);
+                Console.WriteLine($"Subido ► {model.Name}");
+                //await controller.UpdateImportsAsync(model);
+                //Console.WriteLine($"Actualizado ► {model.Name}");
             }
 
             Console.WriteLine("Proceso finalizado.");

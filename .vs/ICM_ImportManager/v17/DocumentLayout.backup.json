@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|c:\\users\\klozano\\documents\\github\\icm_importmanager\\icm_importmanager\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|solutionrelative:icm_importmanager\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|c:\\users\\klozano\\documents\\github\\icm_importmanager\\icm_importmanager\\controllers\\importcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|solutionrelative:icm_importmanager\\controllers\\importcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|c:\\users\\klozano\\documents\\github\\icm_importmanager\\icm_importmanager\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|solutionrelative:icm_importmanager\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|c:\\users\\klozano\\documents\\github\\icm_importmanager\\icm_importmanager\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|solutionrelative:icm_importmanager\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\App.config",
               "RelativeDocumentMoniker": "ICM_ImportManager\\App.config",
@@ -51,26 +51,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainView.cs",
               "DocumentMoniker": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\Views\\MainView.cs",
               "RelativeDocumentMoniker": "ICM_ImportManager\\Views\\MainView.cs",
               "ToolTip": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\Views\\MainView.cs",
               "RelativeToolTip": "ICM_ImportManager\\Views\\MainView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T16:16:11.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ImportController.cs",
               "DocumentMoniker": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\Controllers\\ImportController.cs",
               "RelativeDocumentMoniker": "ICM_ImportManager\\Controllers\\ImportController.cs",
               "ToolTip": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\Controllers\\ImportController.cs",
               "RelativeToolTip": "ICM_ImportManager\\Controllers\\ImportController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA2wB4AAABBAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwA8AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T15:51:18.704Z",
               "EditorCaption": ""

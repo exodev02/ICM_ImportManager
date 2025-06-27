@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ICM_ImportManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fed4f9eb5ed68be96c896bfd13d67d36fdfb911")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65ec02040da2fc21a1d8858f5c0d56094542291d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ICM_ImportManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ICM_ImportManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

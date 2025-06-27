@@ -30,21 +30,18 @@ namespace ICM_ImportManager.Controllers
                 var json = File.ReadAllText(file);
                 var model = JsonSerializer.Deserialize<ImportModel>(json);
                 if (model != null)
-                {
-                    model.DateFormat = "MonthFirst";
-                    model.Version.RowVersion = 0;
-                    model.ImportId = 0;
                     models.Add(model);
-                }
-                    
             }
 
             return models;
         }
 
-        public async Task UploadToApiAsync(ImportModel model)
+        public async Task UploadImportsAsync(ImportModel model)
         {
-            string endpoint = _apiUrl + "/api/v1/imports";
+            string endpoint = $"{_apiUrl}/api/v1/imports/";
+            model.DateFormat = "MonthFirst";
+            model.Version.RowVersion = 0;
+            model.ImportId = 0;
 
             using var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Model", ConfigurationManager.AppSettings["Model"]);
@@ -53,6 +50,19 @@ namespace ICM_ImportManager.Controllers
             var json = JsonSerializer.Serialize(model);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             await client.PostAsync(endpoint, content);
+        }
+
+        public async Task UpdateImportsAsync(ImportModel model)
+        {
+            string endpoint = $"{_apiUrl}/api/v1/imports/{model.ImportId}";
+
+            using var client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Model", ConfigurationManager.AppSettings["Model"]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigurationManager.AppSettings["authToken"]);
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            var json = JsonSerializer.Serialize(model);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            await client.PutAsync(endpoint, content);
         }
     }
 }
