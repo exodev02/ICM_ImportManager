@@ -74,7 +74,7 @@
   "fileOverwrite": false,
   "importId": 3,
   "delimiter": "\u0000",
-  "query": "--TODO ESTO ES UNA PRUEBA DE ACTUALIZACION DE IMPORTS \n SELECT * FROM OPENQUERY([CSCMICMPVC02\\CSCMCVSQLP01], 'SET NOCOUNT ON;SET FMTONLY OFF; EXEC [FEMCO_Transfer].[dbo].spCfgStringDatePeriod_FEMCO_COMP') WHERE Year>='2020'\n",
+  "query": "",
   "queryTimeout": 300,
   "useAdvanced": false,
   "model": "femcocompdev",

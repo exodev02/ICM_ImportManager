@@ -34,7 +34,7 @@
   "fileOverwrite": false,
   "importId": 695,
   "delimiter": "\u0000",
-  "query": "--PRUEBA DE ACTUALIZADO \n SELECT DISTINCT \n  dt_val::date AS fecha,\n  TO_CHAR(dt_val, 'YYYY-MM-DD') AS fechaString,\n  EXTRACT(DOW FROM dt_val) AS DiaSemana,\n  CASE \n    WHEN dt_val::date >= (CURRENT_DATE + INTERVAL '1 month')::date THEN 0\n    ELSE 1\n  END AS Enable\nFROM (\n  SELECT \n    '1900-01-01'::date + value AS dt_val\n  FROM (\n    SELECT \n      (v2 * 100 + v1 * 10 + v0) AS value\n    FROM (\n      SELECT 0 AS v0 UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 \n      UNION SELECT 5 UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9\n    ) AS rs0\n    CROSS JOIN (\n      SELECT 0 AS v1 UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 \n      UNION SELECT 5 UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9\n    ) AS rs1\n    CROSS JOIN (\n      SELECT 0 AS v2 UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 \n      UNION SELECT 5 UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9\n    ) AS rs2\n  ) AS rs\n) AS dates\nWHERE EXTRACT(YEAR FROM dt_val) < EXTRACT(YEAR FROM CURRENT_DATE) + 2;\n",
+  "query": "",
   "queryTimeout": 300,
   "useAdvanced": false,
   "model": "femcocompdev",
