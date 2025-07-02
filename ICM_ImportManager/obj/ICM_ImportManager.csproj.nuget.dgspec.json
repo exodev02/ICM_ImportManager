@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj": {}
+    "C:\\Users\\kevin\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj": {
+    "C:\\Users\\kevin\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj",
         "projectName": "ICM_ImportManager",
-        "projectPath": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj",
-        "packagesPath": "C:\\Users\\klozano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\x86\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\klozano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

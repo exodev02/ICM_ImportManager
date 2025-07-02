@@ -11,14 +11,17 @@ namespace ICM_ImportManager.Views
     {
         public static async Task Main(string[] args)
         {
-            string folderPath = ConfigurationManager.AppSettings["JsonFolderPath"];
-            string apiUrl = ConfigurationManager.AppSettings["APIURL"];
+            //string folderPath = ConfigurationManager.AppSettings["JsonFolderPath"];
+            string apiUrl = ConfigurationManager.AppSettings["ApiURL"];
 
             var controller = new ImportController(apiUrl);
             //var imports = controller.ReadJsonFiles(folderPath);
+            Console.WriteLine("[INFO] Obteniendo importaciones de tipo SQL desde ICM...");
             var imports = await controller.GetAllImports();
+            Console.WriteLine("[INFO] Obteniendo los querys para cada importacion desde ICM...");
             var queryList = await controller.GetImportQuerys();
 
+            Console.WriteLine("[INFO] Procesando importaciones");
             var combinedImports = from import in imports
                                   join query in queryList
                                   on import.ImportId equals query.ImportID
@@ -64,14 +67,14 @@ namespace ICM_ImportManager.Views
 
             foreach (var item in combinedImports)
             {
-                Console.WriteLine($"Updated ► {item.Name} \n {item.Query}");
+                Console.WriteLine($"[INFO] Updated ► {item.Name} \n {item.Query}");
                 //await controller.UploadImportsAsync(model);
                 //Console.WriteLine($"Uploaded ► {model.Name}");
                 //await controller.UpdateImportsAsync(model);
                 //Console.WriteLine($"Updated ► {model.Name}");
             }
 
-            Console.WriteLine("Proceso finalizado.");
+            Console.WriteLine("[INFO] Proceso finalizado!");
         }
     }
 }

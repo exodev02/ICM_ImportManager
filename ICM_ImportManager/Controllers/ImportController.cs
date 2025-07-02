@@ -78,7 +78,7 @@ namespace ICM_ImportManager.Controllers
 
             var payload = new
             {
-                queryString = "SELECT DISTINCT \"ImportID\" ,\"Query\" FROM \"ImportDB\"",
+                queryString = "SELECT DISTINCT \"ImportID\",\"Query\" FROM \"ImportDB\"",
                 offset = 0,
                 limit = 900
             };
@@ -134,7 +134,7 @@ namespace ICM_ImportManager.Controllers
                 Console.WriteLine($"Error General: {ex.Message}");
             }
 
-            return new List<ImportQuery>(); // Si algo salió mal, retorna una lista vacía
+            return new List<ImportQuery>(); // Si algo salió mal, retorna una lista vacía 
         }
 
         public async Task<List<ImportModel>> GetAllImports()
@@ -158,13 +158,15 @@ namespace ICM_ImportManager.Controllers
 
             var imports = JsonSerializer.Deserialize<List<ImportModel>>(json);
 
-            //foreach (var import in imports)
-            //{
-            //    if (import.ImportType != "DBImport")
-            //        imports.Remove(import);
-            //}
+            List<ImportModel> filteredImports = new List<ImportModel>();
 
-            return imports ?? new List<ImportModel>();
+            foreach (var import in imports)
+            {
+                if (import.ImportType == "DBImport")
+                    filteredImports.Add(import);
+            }
+
+            return filteredImports ?? new List<ImportModel>();
         }
     }
 }
