@@ -97,50 +97,74 @@ namespace ICM_ImportManager.Controllers
                 {
                     PropertyNameCaseInsensitive = true,
                 };
+                
+                var apiResponse = JsonSerializer.Deserialize<ImportQueryApiResponse>(json, options);
 
-
-
-                var importQueryModel = JsonSerializer.Deserialize<ImportQueryModel>(json, options);
-
-                // Mapeo de los datos a una lista de ImportQuery
                 var importQuerys = new List<ImportQuery>();
-
-
-                foreach (var row in importQueryModel.Data)
+                foreach (var row in apiResponse.Data)
                 {
-                    var importID = row[0].Integer ?? 0;
-                    var query = row[1].String;
-
-                    importQuerys.Add(new ImportQuery
+                    if (row.Count >= 2)
                     {
-                        ImportID = (int)importID,
-                        Query = query
-                    });
+                        var importID = row[0].GetInt32();
+                        var query = row[1].GetString();
+
+                        importQuerys.Add(new ImportQuery
+                        {
+                            ImportID = importID,
+                            Query = query
+                        });
+                    }
+                    else
+                    {
+                        Console.WriteLine("Advertencia: Fila de datos inesperada sin ImportID o Query.");
+                    }
                 }
-
-                //var responseString = await response.Content.ReadAsStringAsync();
-                //var result = JsonSerializer.Deserialize<ImportQueryModel>(responseString);
-
-                //// Si quieres mapear manualmente a objetos fuertemente tipados:
-                //var queries = result.Data.Select(row => new ImportQueryModel
-                //{
-                //    ImportID = Convert.ToInt32(row[0]),
-                //    Query = row[1].ToString()
-                //}).ToList();
-
-                //return queries;
                 return importQuerys;
             }
             catch (HttpRequestException ex)
             {
-                Console.WriteLine($"{ex.StatusCode} — {ex.Message}");
+                Console.WriteLine($"Error HTTP: {ex.StatusCode} — {ex.Message}");
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine($"Error de Deserialización JSON: {ex.Message}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{ex.Message}");
+                Console.WriteLine($"Error General: {ex.Message}");
             }
 
-            return new List<ImportQuery>(); // Si algo salio mal retorna una lista vacia
+            return new List<ImportQuery>(); // Si algo salió mal, retorna una lista vacía
+        }
+
+        public async Task<List<ImportModel>> GetAllImports()
+        {
+            string endpoint = $"{_apiUrl}/api/v1/imports";
+
+            using var client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Model", ConfigurationManager.AppSettings["Model"]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigurationManager.AppSettings["authToken"]);
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var response = await client.GetAsync(endpoint);
+            response.EnsureSuccessStatusCode();
+
+            var json = await response.Content.ReadAsStringAsync();
+
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+            };
+
+            var imports = JsonSerializer.Deserialize<List<ImportModel>>(json);
+
+            //foreach (var import in imports)
+            //{
+            //    if (import.ImportType != "DBImport")
+            //        imports.Remove(import);
+            //}
+
+            return imports ?? new List<ImportModel>();
         }
     }
 }

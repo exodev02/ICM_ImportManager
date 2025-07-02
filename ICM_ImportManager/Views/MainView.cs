@@ -15,8 +15,9 @@ namespace ICM_ImportManager.Views
             string apiUrl = ConfigurationManager.AppSettings["APIURL"];
 
             var controller = new ImportController(apiUrl);
-            var imports = controller.ReadJsonFiles(folderPath);
-            List<ImportQuery> queryList = await controller.GetImportQuerys();
+            //var imports = controller.ReadJsonFiles(folderPath);
+            var imports = await controller.GetAllImports();
+            var queryList = await controller.GetImportQuerys();
 
             var combinedImports = from import in imports
                                   join query in queryList
@@ -60,7 +61,6 @@ namespace ICM_ImportManager.Views
                                       SymonImportType = import.SymonImportType,
                                       RefreshAllPipeDatasources = import.RefreshAllPipeDatasources,
                                   };
-
 
             foreach (var item in combinedImports)
             {

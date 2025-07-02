@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|solutionrelative:icm_importmanager\\controllers\\importcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|c:\\users\\klozano\\documents\\github\\icm_importmanager\\icm_importmanager\\models\\importquerymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|solutionrelative:icm_importmanager\\models\\importquerymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|c:\\users\\klozano\\documents\\github\\icm_importmanager\\icm_importmanager\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|solutionrelative:icm_importmanager\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|c:\\users\\klozano\\documents\\github\\icm_importmanager\\icm_importmanager\\models\\importquerymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2B17937-7ABE-4D52-AF14-05DC7DB95654}|ICM_ImportManager\\ICM_ImportManager.csproj|solutionrelative:icm_importmanager\\models\\importquerymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,13 +38,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ImportQueryModel.cs",
               "DocumentMoniker": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\Models\\ImportQueryModel.cs",
               "RelativeDocumentMoniker": "ICM_ImportManager\\Models\\ImportQueryModel.cs",
               "ToolTip": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\Models\\ImportQueryModel.cs",
               "RelativeToolTip": "ICM_ImportManager\\Models\\ImportQueryModel.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T16:29:17.657Z",
               "EditorCaption": ""
@@ -57,20 +57,20 @@
               "RelativeDocumentMoniker": "ICM_ImportManager\\Controllers\\ImportController.cs",
               "ToolTip": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\Controllers\\ImportController.cs",
               "RelativeToolTip": "ICM_ImportManager\\Controllers\\ImportController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAgwIcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAMwIsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T15:51:18.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainView.cs",
               "DocumentMoniker": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\Views\\MainView.cs",
               "RelativeDocumentMoniker": "ICM_ImportManager\\Views\\MainView.cs",
               "ToolTip": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\Views\\MainView.cs",
               "RelativeToolTip": "ICM_ImportManager\\Views\\MainView.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBQAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T16:16:11.411Z",
               "EditorCaption": ""
