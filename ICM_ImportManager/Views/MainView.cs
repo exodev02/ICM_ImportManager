@@ -24,7 +24,8 @@ namespace ICM_ImportManager.Views
             Console.WriteLine("[INFO] Procesando importaciones");
             var combinedImports = from import in imports
                                   join query in queryList
-                                  on import.ImportId equals query.ImportID
+                                  //on import.ImportId equals query.ImportID // los id pueden cambiar
+                                  on import.Name equals query.Name
                                   select new ImportModel
                                   {
                                       Name = import.Name,

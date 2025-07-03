@@ -31,7 +31,8 @@ namespace ICM_ImportManager.Models
 
     public class ImportQuery
     {
-        public int ImportID { get; set; }
+        //public int ImportID { get; set; }
+        public string Name { get; set;}
         public string Query { get; set; }
     }
 }

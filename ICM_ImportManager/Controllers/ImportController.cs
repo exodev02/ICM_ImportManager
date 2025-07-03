@@ -78,7 +78,7 @@ namespace ICM_ImportManager.Controllers
 
             var payload = new
             {
-                queryString = "SELECT DISTINCT \"ImportID\",\"Query\" FROM \"ImportDB\"",
+                queryString = "SELECT I.\"Name\",IBD.\"Query\" FROM \"Import\" I INNER JOIN \"ImportDB\" IBD ON I.\"ImportID\" = IBD.\"ImportID\"",
                 offset = 0,
                 limit = 900
             };
@@ -101,16 +101,19 @@ namespace ICM_ImportManager.Controllers
                 var apiResponse = JsonSerializer.Deserialize<ImportQueryApiResponse>(json, options);
 
                 var importQuerys = new List<ImportQuery>();
+
                 foreach (var row in apiResponse.Data)
                 {
                     if (row.Count >= 2)
                     {
-                        var importID = row[0].GetInt32();
+                        //var importID = row[0].GetInt32();
+                        var name = row[0].GetString();
                         var query = row[1].GetString();
 
                         importQuerys.Add(new ImportQuery
                         {
-                            ImportID = importID,
+                            //ImportID = importID,
+                            Name = name,
                             Query = query
                         });
                     }
