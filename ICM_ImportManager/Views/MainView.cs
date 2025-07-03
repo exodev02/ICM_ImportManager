@@ -66,13 +66,13 @@ namespace ICM_ImportManager.Views
                                       RefreshAllPipeDatasources = import.RefreshAllPipeDatasources,
                                   };
 
-            foreach (var item in combinedImports)
+            foreach (var import in combinedImports)
             {
-                Console.WriteLine($"[INFO] Updated ► {item.Name} \n {item.Query}");
-                //await controller.UploadImportsAsync(model);
-                //Console.WriteLine($"Uploaded ► {model.Name}");
-                //await controller.UpdateImportsAsync(model);
-                //Console.WriteLine($"Updated ► {model.Name}");
+                //Console.WriteLine($"[INFO] Updated ► {import.Name} \n {import.Query}");
+                await controller.UploadImportsAsync(import);
+                Console.WriteLine($"Uploaded ► {import.Name}");
+                //await controller.UpdateImportsAsync(import);
+                //Console.WriteLine($"Updated ► {import.Name}");
             }
 
             Console.WriteLine("[INFO] Proceso finalizado!");

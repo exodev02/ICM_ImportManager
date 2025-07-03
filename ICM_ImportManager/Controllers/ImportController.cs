@@ -170,6 +170,17 @@ namespace ICM_ImportManager.Controllers
             }
 
             return filteredImports ?? new List<ImportModel>();
+
+            // TESTS
+
+            //List<ImportModel> testList = new List<ImportModel>();
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    testList.Add(filteredImports.ElementAt(i));
+            //}
+
+            //return testList ?? new List<ImportModel>();
         }
     }
 }
