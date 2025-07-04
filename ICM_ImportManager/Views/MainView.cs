@@ -3,6 +3,7 @@ using ICM_ImportManager.Models;
 using System;
 using System.Configuration;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ICM_ImportManager.Views
@@ -11,8 +12,85 @@ namespace ICM_ImportManager.Views
     {
         public static async Task Main(string[] args)
         {
+            Console.WriteLine("ICM IMPORT MANAGER v0.1");
+            Console.WriteLine("Que operacion va a realizar? 0 = Crear | 1 = Actualizar");
+            int opc = Convert.ToInt32(Console.ReadLine());
+
+            if (opc == 0) // CREAR
+            {
+                int respuesta = 0;
+
+                do
+                {
+                    string name = "";
+                    string query = "";
+                    string table = "";
+
+                    
+
+                    Console.Write("Nombre ► ");
+                    Console.ReadLine();
+                    Console.Write("Query ► ");
+                    Console.ReadLine();
+                    Console.Write("Tabla ► ");
+                    Console.ReadLine();
+
+                    var import = new ImportModel
+                    {
+                        Name = name,
+                        ImportType = "DBImport",
+                        HasHeader = true,
+                        Table = table,
+                        ColumnMatchings = new ColumnMatchings
+                        {
+                            Columns = [],
+                            Matched = [],
+                        },
+                        DateFormat = "MonthFirst",
+                        ListSubitems = [],
+                        SubitemMap = { },
+                        AddMember = false,
+                        UpdateExistingRows = false,
+                        TableType = "Custom",
+                        IsLocal = false,
+                        UseIncrementalImport = false,
+                        Culture = "en-US",
+                        TableEffectiveDated = false,
+                        IsOdbcTextDriver = false,
+                        Version = { RowVersion = 0 },
+                        FileOverwrite = false,
+                        ImportId = 0,
+                        Delimiter = "\u0000",
+                        Query = query,
+                        QueryTimeout = 300,
+                        UseAdvanced = false,
+                        Model = ConfigurationManager.AppSettings["Model"],
+                        ImportMethod = 0,
+                        UserSelected = false,
+                        Sandbox = false,
+                        CodePage = 0,
+                        IgnoreFirst = false,
+                        IgnoreLast = false,
+                        RecordLength = 0,
+                        UploadStage = false,
+                        PredictStage = false,
+                        DownloadStage = false,
+                        SymonImportType = "None",
+                        RefreshAllPipeDatasources = false,
+                    };
+
+                    Console.WriteLine("Desea crear otra importacion? 0 = NO | 1 = SI");
+                    respuesta = Convert.ToInt32(Console.ReadLine());
+                } while (respuesta != 0);
+
+
+            } else // ACTUALIZA
+            {
+                Console.WriteLine("Seleccior metodo de actualizacion. 0 = Mediante el API de ICM | 1 = ");
+            }
             //string folderPath = ConfigurationManager.AppSettings["JsonFolderPath"];
             string apiUrl = ConfigurationManager.AppSettings["ApiURL"];
+            string pattern = @"(?i)\s*from\s+""[^""]+""\s*";
 
             var controller = new ImportController(apiUrl);
             //var imports = controller.ReadJsonFiles(folderPath);
@@ -68,9 +146,20 @@ namespace ICM_ImportManager.Views
 
             foreach (var import in combinedImports)
             {
-                //Console.WriteLine($"[INFO] Updated ► {import.Name} \n {import.Query}");
-                await controller.UploadImportsAsync(import);
-                Console.WriteLine($"Uploaded ► {import.Name}");
+                string query = import.Query;
+
+                Match match = Regex.Match(query, pattern);
+
+                Console.WriteLine($"\n[INFO] Import ► {import.Name}");
+
+                if (match.Success)
+                    Console.WriteLine("\t> Sintax ► PostgreSQL");
+                else
+                    Console.WriteLine("\t> Syntax ► SQL Server");
+
+                    Console.WriteLine($"\t> Query ► {import.Query}");
+                //await controller.UploadImportsAsync(import);
+                //Console.WriteLine($"Uploaded ► {import.Name}");
                 //await controller.UpdateImportsAsync(import);
                 //Console.WriteLine($"Updated ► {import.Name}");
             }
