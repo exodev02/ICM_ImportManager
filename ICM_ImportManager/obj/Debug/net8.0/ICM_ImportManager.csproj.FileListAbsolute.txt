@@ -66,3 +66,4 @@ C:\Users\kevin\Documents\GitHub\ICM_ImportManager\ICM_ImportManager\obj\Debug\ne
 C:\Users\kevin\Documents\GitHub\ICM_ImportManager\ICM_ImportManager\obj\Debug\net8.0\ICM_ImportManager.pdb
 C:\Users\kevin\Documents\GitHub\ICM_ImportManager\ICM_ImportManager\obj\Debug\net8.0\ICM_ImportManager.genruntimeconfig.cache
 C:\Users\kevin\Documents\GitHub\ICM_ImportManager\ICM_ImportManager\obj\Debug\net8.0\ref\ICM_ImportManager.dll
+C:\Users\kevin\Documents\GitHub\ICM_ImportManager\ICM_ImportManager\bin\Debug\net8.0\CsvHelper.dll

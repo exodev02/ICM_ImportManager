@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "MbdLGLKdTGs=",
+  "dgSpecHash": "LfemYrBTJAE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\klozano\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj",
+  "projectFilePath": "C:\\Users\\kevin\\Documents\\GitHub\\ICM_ImportManager\\ICM_ImportManager\\ICM_ImportManager.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\klozano\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.6\\system.configuration.configurationmanager.9.0.6.nupkg.sha512",
-    "C:\\Users\\klozano\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.6\\system.diagnostics.eventlog.9.0.6.nupkg.sha512",
-    "C:\\Users\\klozano\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.6\\system.security.cryptography.protecteddata.9.0.6.nupkg.sha512"
+    "C:\\Users\\kevin\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.6\\system.configuration.configurationmanager.9.0.6.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.6\\system.diagnostics.eventlog.9.0.6.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.6\\system.security.cryptography.protecteddata.9.0.6.nupkg.sha512"
   ],
   "logs": []
 }
